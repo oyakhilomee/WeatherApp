@@ -29,6 +29,22 @@
   </head>
 
   <body lang="en">
+    <div class="desc">
+      <h2>Oyas Open Weather API Application</h2>
+      <h4>Written in JavaScript</h4>
+
+      <form action="" id="myForm">
+        <input
+          type="text"
+          name=""
+          required
+          id="city"
+          placeholder="Enter City Name"
+        />
+        <input type="submit" value="Get Weather " class="weatherinputbtn" />
+      </form>
+    </div>
+
     <div class="weather-wrapper hide">
       <img src="" class="weather-icon" alt="Weather Icon" />
 
@@ -81,9 +97,19 @@
 
     <script>
       $(function () {
+        $("#myForm").submit(function (e) {
+          e.preventDefault();
+
+          var city = $("#city").val();
+
+          getWeather(city);
+        });
+      });
+
+      function getWeather(city) {
         $(".weather-temperature").openWeather({
           key: "a5bbe554e5048874ad8ad812643f4d9a",
-          city: "Lagos",
+          city: city,
           descriptionTarget: ".weather-description",
           windSpeedTarget: ".weather-wind-speed",
           minTemperatureTarget: ".weather-min-temperature",
@@ -104,7 +130,7 @@
             $(".weather-wrapper").remove();
           },
         });
-      });
+      }
     </script>
   </body>
 </html>
