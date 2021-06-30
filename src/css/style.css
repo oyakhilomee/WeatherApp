@@ -6,7 +6,7 @@ body {
 }
 
 .desc {
-  color: blue;
+  color: rgb(80, 75, 75);
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -17,13 +17,28 @@ body {
 .weatherinputbtn {
   outline-color: none;
   background-color: purple;
+  background: linear-gradient(
+    90deg,
+    rgba(13, 164, 237, 1) 0%,
+    rgb(66, 16, 206) 0%,
+    rgb(12, 164, 194) 91%
+  );
   color: #fff;
-  padding: 0.5rem 0.5rem;
+  padding: 0.4rem 0.4rem;
   cursor: pointer;
+  border-radius: 0.2rem;
+  border: none;
+  margin-top: 0.5rem;
 }
 
-.weatherinputbtn:hover {
-  background-color: blue;
+.inputformholder {
+  padding: 0.4rem 0.3rem;
+}
+
+.submitdivbtn {
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .weather-wrapper {
