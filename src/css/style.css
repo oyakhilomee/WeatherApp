@@ -14,9 +14,18 @@ body {
   margin-top: 2rem;
 }
 
+.inputformholder {
+  padding: 0.4rem 0.3rem;
+}
+
+.submitdivbtn {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
 .weatherinputbtn {
   outline-color: none;
-  background-color: purple;
   background: linear-gradient(
     90deg,
     rgba(13, 164, 237, 1) 0%,
@@ -29,16 +38,6 @@ body {
   border-radius: 0.2rem;
   border: none;
   margin-top: 0.5rem;
-}
-
-.inputformholder {
-  padding: 0.4rem 0.3rem;
-}
-
-.submitdivbtn {
-  display: flex;
-  justify-content: center;
-  align-items: center;
 }
 
 .weather-wrapper {
